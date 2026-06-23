@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopi Dham | Premium Stay in Haridwar</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate On Scroll (AOS) CSS for Modern Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- Ultra Modern UI Styles --- */
+        
+        /* Glassmorphism Navbar */
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Hero Section Enhancements */
+        .hero {
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(30, 57, 42, 0.9)), url('images/hero-bg.jpg') no-repeat center center/cover;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Quick Amenities Bar */
+        .amenities-bar {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transform: translateY(-50%);
+            position: relative;
+            z-index: 10;
+            padding: 30px 20px;
+        }
+        .amenity-item i {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .amenity-item:hover i {
+            transform: translateY(-5px);
+        }
+
+        /* Modern Video Player */
+        .modern-video-wrapper {
+            position: relative;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 30px;
+            padding: 10px;
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        }
+        .modern-video-wrapper video {
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Modern Cards */
+        .modern-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .modern-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+        .modern-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .modern-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Image Offset Layout (About Section) */
+        .image-offset-box {
+            position: relative;
+            border-radius: 20px;
+            z-index: 2;
+        }
+        .image-bg-pattern {
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-gold);
+            border-radius: 20px;
+            z-index: 1;
+            opacity: 0.2;
+        }
+
+        /* Scroll Down Indicator */
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 24px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gopi Dham</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Book</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero d-flex align-items-center text-center">
+        <div class="container" data-aos="fade-up" data-aos-duration="1500">
+            <span class="hero-subtitle">Discover Divine Peace</span>
+            <h1 class="text-white mb-4">Welcome to Gopi Dham</h1>
+            <p class="text-light mb-5 fs-5">A Premium Ashram & Hotel Experience Near Har Ki Paudi.</p>
+            <a href="contact.html" class="btn btn-gold btn-lg rounded-pill px-5 py-3 me-3 shadow">Book Your Stay</a>
+            <a href="#video-tour" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3"><i class="fas fa-play me-2"></i> Take a Tour</a>
+        </div>
+        <a href="#amenities" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </header>
+
+    <!-- Amenities Bar (Overlapping Hero) -->
+    <div class="container" id="amenities">
+        <div class="amenities-bar" data-aos="fade-up" data-aos-delay="200">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3 amenity-item">
+                    <i class="fas fa-om"></i>
+                    <h6 class="fw-bold">In-House Temple</h6>
+                    <p class="text-muted small mb-0">Peaceful Shivling</p>
+                </div>
+                <div class="col-6 col-md-3 amenity-item">
+                    <i class="fas fa-snowflake"></i>
+                    <h6 class="fw-bold">AC Rooms</h6>
+                    <p class="text-muted small mb-0">Comfortable Stay</p>
+                </div>
+                <div class="col-6 col-md-3 amenity-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h6 class="fw-bold">Prime Location</h6>
+                    <p class="text-muted small mb-0">5KM from Har Ki Paudi</p>
+                </div>
+                <div class="col-6 col-md-3 amenity-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h6 class="fw-bold">Safe & Secure</h6>
+                    <p class="text-muted small mb-0">24/7 Security</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section with Modern Offset Image -->
+    <section id="about" class="section-padding bg-light pt-0">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="position-relative">
+                        <div class="image-bg-pattern"></div>
+                        <img src="images/temple.jpg" alt="Gopi Dham Temple" class="img-fluid image-offset-box shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h6 class="text-uppercase text-warning fw-bold letter-spacing">About Us</h6>
+                    <h2 class="display-5 fw-bold mb-4" style="color: var(--dark-green);">Experience Pure Devotion & Comfort</h2>
+                    <p class="text-muted fs-5 mb-4">Whether you are visiting Haridwar for the holy Ganga Aarti or seeking a quiet spiritual retreat, Gopi Dham offers the perfect blend of ashram tranquility and modern hotel facilities.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Neat & Clean Environment</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Budget Friendly Accommodations</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Family Friendly Atmosphere</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-dark btn-lg rounded-pill px-4">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Video Tour Section -->
+    <section id="video-tour" class="section-padding text-white" style="background-color: var(--dark-green);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h6 class="text-uppercase" style="color: var(--primary-gold);">Property Tour</h6>
+                    <h2 class="display-5 fw-bold mb-4">Take a Virtual Walkthrough</h2>
+                    <p class="text-light mb-4 opacity-75">Watch our quick video tour to explore the rooms, corridors, and the peaceful ambiance that awaits you at Gopi Dham. Experience the comfort before you even arrive.</p>
+                    <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-4 text-dark fw-bold">Book After Watching</a>
+                </div>
+                <div class="col-lg-7 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="modern-video-wrapper">
+                        <!-- Updated Video Path Here -->
+                        <video src="images/video.mp4" controls autoplay muted loop playsinline poster="images/hero-bg.jpg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elegant Rooms Section -->
+    <section id="rooms" class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-uppercase text-warning fw-bold">Accommodation</h6>
+                <h2 class="display-5 fw-bold" style="color: var(--dark-green);">Choose Your Comfort</h2>
+            </div>
+            
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="modern-card">
+                        <img src="images/ac-room.jpg" class="w-100" style="height: 300px; object-fit: cover;" alt="AC Room">
+                        <div class="position-absolute bottom-0 start-0 p-4 w-100 text-white" style="z-index: 2;">
+                            <h3 class="fw-bold">Premium AC Rooms</h3>
+                            <p class="mb-3 opacity-75">Stay cool and relaxed in our well-furnished air-conditioned rooms.</p>
+                            <a href="rooms.html" class="btn btn-sm btn-gold rounded-pill px-4">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="modern-card">
+                        <img src="images/non-ac-room.jpg" class="w-100" style="height: 300px; object-fit: cover;" alt="Non AC Room">
+                        <div class="position-absolute bottom-0 start-0 p-4 w-100 text-white" style="z-index: 2;">
+                            <h3 class="fw-bold">Budget Non-AC Rooms</h3>
+                            <p class="mb-3 opacity-75">Clean, ventilated, and highly affordable rooms for all travelers.</p>
+                            <a href="rooms.html" class="btn btn-sm btn-gold rounded-pill px-4">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="rooms.html" class="btn btn-outline-dark btn-lg rounded-pill px-5">See Pricing & All Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #112219; color: var(--beige); padding: 70px 0 30px;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5 mb-4">
+                    <h3 class="fw-bold" style="color: var(--primary-gold); font-family: 'Playfair Display', serif;">Gopi Dham</h3>
+                    <p class="opacity-75 mt-3 pe-md-5">Your peaceful ashram and comfortable stay near the holy city of Haridwar. Dedicated to providing a divine experience.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled opacity-75 line-height-lg">
+                        <li><a href="about.html" class="text-decoration-none text-light">About Us</a></li>
+                        <li><a href="rooms.html" class="text-decoration-none text-light">Our Rooms</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none text-light">Photo Gallery</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-light">Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Contact Us</h5>
+                    <p class="opacity-75 mb-2"><i class="fas fa-phone-alt me-2"></i> +91 88513 92151</p>
+                    <p class="opacity-75 mb-2"><i class="fas fa-map-marker-alt me-2"></i> Raiwala, Near Haridwar</p>
+                    <p class="opacity-75"><i class="fas fa-clock me-2"></i> Check-in/Out: 11:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center opacity-50 small">
+                <p class="mb-0">© 2026 Gopi Dham Hotel & Ashram. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918851392151" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts: Bootstrap & AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true, // Animation happens only once while scrolling down
+            offset: 100 // Starts animation 100px before element hits the bottom
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled', 'navbar-light');
+                navbar.classList.remove('navbar-dark', 'py-3');
+            } else {
+                navbar.classList.remove('scrolled', 'navbar-light');
+                navbar.classList.add('navbar-dark', 'py-3');
+            }
+        });
+    </script>
+</body>
+</html>

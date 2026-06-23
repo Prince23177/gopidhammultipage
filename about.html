@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gopi Dham</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Glassmorphism Navbar */
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Modern Page Header */
+        .page-header {
+            height: 50vh;
+            background: linear-gradient(rgba(17, 34, 25, 0.8), rgba(17, 34, 25, 0.6)), url('images/hero-bg.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Image Stack Design */
+        .image-stack {
+            position: relative;
+            height: 500px;
+        }
+        .image-stack img {
+            position: absolute;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transition: transform 0.4s ease;
+        }
+        .image-stack img:hover {
+            transform: translateY(-10px);
+            z-index: 10 !important;
+        }
+        .img-back {
+            width: 70%;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .img-front {
+            width: 65%;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            border: 8px solid var(--white);
+        }
+
+        /* Value Cards */
+        .value-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .value-card:hover {
+            transform: translateY(-10px);
+            background-color: var(--dark-green);
+            color: var(--white);
+        }
+        .value-card:hover i, .value-card:hover h4 {
+            color: var(--primary-gold) !important;
+        }
+        .value-card i {
+            font-size: 3rem;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .value-card p {
+            color: var(--text-light);
+        }
+        .value-card:hover p {
+            color: var(--beige);
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gopi Dham</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Book</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container mt-5" data-aos="zoom-in" data-aos-duration="1000">
+            <h6 class="text-uppercase mb-3" style="color: var(--primary-gold); letter-spacing: 2px;">Our Story</h6>
+            <h1 class="display-4 text-white fw-bold">About Gopi Dham</h1>
+        </div>
+    </header>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h6 class="text-uppercase text-warning fw-bold letter-spacing mb-2">Welcome to Your Second Home</h6>
+                    <h2 class="display-6 fw-bold mb-4" style="color: var(--dark-green);">A Peaceful Retreat <br>in the Holy City</h2>
+                    <p class="text-muted fs-5 mb-4">Gopi Dham is more than just a hotel; it is a spiritual ashram designed to give you peace of mind. Located in a quiet area near Raiwala, away from the extreme rush of the city, we provide a clean, secure, and family-friendly environment.</p>
+                    <p class="text-muted mb-4">Start your mornings with devotion at our beautifully maintained <strong>In-House Shivling Temple</strong>. Whether you choose our Premium AC rooms for summer comfort or our well-ventilated Non-AC rooms, we ensure a comfortable stay within your budget.</p>
+                    
+                    <div class="d-flex align-items-center mt-4 p-3 rounded-4 bg-light border-start border-4 border-warning">
+                        <i class="fas fa-clock fs-2 me-3 text-warning"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0">Check-in & Check-out</h6>
+                            <p class="text-muted small mb-0">11:00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="image-stack">
+                        <img src="images/exterior-night.jpg" alt="Hotel Interior" class="img-back">
+                        <img src="images/temple.jpg" alt="Gopi Dham Temple" class="img-front">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="images/balcony.jpg" alt="Balcony View" class="img-fluid rounded-4 shadow-lg w-100" style="height: 450px; object-fit: cover;">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h6 class="text-uppercase text-warning fw-bold letter-spacing mb-2">The Location</h6>
+                    <h2 class="display-6 fw-bold mb-4" style="color: var(--dark-green);">Experience Haridwar</h2>
+                    <p class="text-muted fs-5 mb-4">Haridwar, the gateway to the Gods, is a city where spirituality flows with the river Ganges. Staying at Gopi Dham allows you to experience this divine energy perfectly.</p>
+                    <ul class="list-unstyled text-muted line-height-lg">
+                        <li class="mb-3"><i class="fas fa-om text-success me-3 fs-5"></i> <strong>Har Ki Paudi (5 KM):</strong> Attend the mesmerizing evening Ganga Aarti easily.</li>
+                        <li class="mb-3"><i class="fas fa-train text-success me-3 fs-5"></i> <strong>Raiwala Station (2 KM):</strong> Excellent connectivity away from main city traffic.</li>
+                        <li class="mb-3"><i class="fas fa-tree text-success me-3 fs-5"></i> <strong>Peaceful Environment:</strong> Enjoy the fresh air and serene atmosphere, ideal for meditation and yoga.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-6 fw-bold" style="color: var(--dark-green);">Why Choose Gopi Dham?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="value-card">
+                        <i class="fas fa-broom"></i>
+                        <h4 class="fw-bold mb-3" style="color: var(--dark-green);">Spotless Cleanliness</h4>
+                        <p>We maintain the highest standards of hygiene in all our rooms and corridors for your health and safety.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="value-card">
+                        <i class="fas fa-wallet"></i>
+                        <h4 class="fw-bold mb-3" style="color: var(--dark-green);">Budget Friendly</h4>
+                        <p>Experience premium ashram facilities without stretching your budget. Honest pricing with no hidden costs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="value-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4 class="fw-bold mb-3" style="color: var(--dark-green);">24/7 Support</h4>
+                        <p>Our dedicated staff is always available to ensure your stay is comfortable and all your needs are met.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #112219; color: var(--beige); padding: 70px 0 30px;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5 mb-4">
+                    <h3 class="fw-bold" style="color: var(--primary-gold); font-family: 'Playfair Display', serif;">Gopi Dham</h3>
+                    <p class="opacity-75 mt-3 pe-md-5">Your peaceful ashram and comfortable stay near the holy city of Haridwar. Dedicated to providing a divine experience.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled opacity-75 line-height-lg">
+                        <li><a href="about.html" class="text-decoration-none text-light">About Us</a></li>
+                        <li><a href="rooms.html" class="text-decoration-none text-light">Our Rooms</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none text-light">Photo Gallery</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-light">Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Contact Us</h5>
+                    <p class="opacity-75 mb-2"><i class="fas fa-phone-alt me-2"></i> +91 88513 92151</p>
+                    <p class="opacity-75 mb-2"><i class="fas fa-map-marker-alt me-2"></i> Raiwala, Near Haridwar</p>
+                    <p class="opacity-75"><i class="fas fa-clock me-2"></i> Check-in/Out: 11:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center opacity-50 small">
+                <p class="mb-0">© 2026 Gopi Dham Hotel & Ashram. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918851392151" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled', 'navbar-light');
+                navbar.classList.remove('navbar-dark', 'py-3');
+            } else {
+                navbar.classList.remove('scrolled', 'navbar-light');
+                navbar.classList.add('navbar-dark', 'py-3');
+            }
+        });
+    </script>
+</body>
+</html> 
